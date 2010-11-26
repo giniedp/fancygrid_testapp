@@ -1,0 +1,14 @@
+en:
+  fancygrid:
+    pagination:
+      per_page: 'Results per Page:'
+      page: 'Page'
+      of: 'of'
+      results: 'Results'
+      
+      prev_page: 'Pervious pagee'
+      next_page: 'Next page'
+      reload: 'Reload'
+    search:
+      clear: 'Clear search'
+      toggle: 'Show/Hide searchtab'

@@ -1,0 +1,16 @@
+%p#notice= notice
+%p
+  %b Company:
+  = @employee.company
+%p
+  %b Name:
+  = @employee.name
+%p
+  %b Department:
+  = @employee.department
+%p
+  %b Birthday:
+  = @employee.birthday
+= link_to 'Edit', edit_employee_path(@employee)
+|
+\#{link_to 'Back', employees_path}

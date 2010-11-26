@@ -1,0 +1,149 @@
+/* line 16, ../../../app/stylesheets/fancygrid.scss */
+.js-fancygrid .js-tablewrapper {
+  clear: left;
+  overflow: auto;
+  margin: 0px;
+  min-height: 60px;
+  border: 1px solid #cccccc;
+}
+/* line 24, ../../../app/stylesheets/fancygrid.scss */
+.js-fancygrid .js-tablewrapper table {
+  width: 100%;
+  border-spacing: 0px;
+  font-size: 90%;
+}
+/* line 30, ../../../app/stylesheets/fancygrid.scss */
+.js-fancygrid .js-tablewrapper table tr th {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 10px 5px 10px;
+  border-right: 1px solid #cccccc;
+}
+/* line 37, ../../../app/stylesheets/fancygrid.scss */
+.js-fancygrid .js-tablewrapper table tr td {
+  padding: 4px 10px 4px 10px;
+  border-right: 1px solid #cccccc;
+  background: none repeat scroll 0 0 #f8f8f8;
+}
+/* line 41, ../../../app/stylesheets/fancygrid.scss */
+.js-fancygrid .js-tablewrapper table tr td img {
+  vertical-align: bottom;
+}
+/* line 46, ../../../app/stylesheets/fancygrid.scss */
+.js-fancygrid .js-tablewrapper table tr th:last-child, .js-fancygrid .js-tablewrapper table tr td:last-child {
+  border-right: none;
+}
+/* line 53, ../../../app/stylesheets/fancygrid.scss */
+.js-fancygrid .js-tablewrapper table tr:nth-child(odd) td {
+  background: none repeat scroll 0 0 #e8e8e8;
+}
+/* line 59, ../../../app/stylesheets/fancygrid.scss */
+.js-fancygrid .js-tablewrapper table tr:hover td {
+  background: none repeat scroll 0 0 #dedede;
+}
+/* line 65, ../../../app/stylesheets/fancygrid.scss */
+.js-fancygrid .js-tablewrapper table tr.js-search td {
+  padding: 4px;
+  background: none repeat scroll 0 0 #f8f8f8;
+}
+/* line 69, ../../../app/stylesheets/fancygrid.scss */
+.js-fancygrid .js-tablewrapper table tr.js-search td input {
+  display: inline;
+  width: 99%;
+  height: 25px;
+  margin: 0px;
+  padding: 0px;
+  border: 1px solid #cccccc;
+}
+/* line 78, ../../../app/stylesheets/fancygrid.scss */
+.js-fancygrid .js-tablewrapper table tr.js-search td input:focus {
+  background: none repeat scroll 0 0 #fffae0;
+}
+/* line 84, ../../../app/stylesheets/fancygrid.scss */
+.js-fancygrid .js-tablewrapper table tr.js-search:hover td {
+  background: none repeat scroll 0 0 #f8f8f8;
+}
+/* line 91, ../../../app/stylesheets/fancygrid.scss */
+.js-fancygrid ul.js-tablecontrol.top {
+  background: transparent;
+}
+/* line 94, ../../../app/stylesheets/fancygrid.scss */
+.js-fancygrid ul.js-tablecontrol.bottom {
+  background: transparent;
+}
+/* line 97, ../../../app/stylesheets/fancygrid.scss */
+.js-fancygrid ul.js-tablecontrol {
+  clear: both;
+  display: block;
+  text-align: center;
+  margin: 0px;
+  padding: 5px;
+}
+/* line 104, ../../../app/stylesheets/fancygrid.scss */
+.js-fancygrid ul.js-tablecontrol li {
+  list-style: none;
+  display: inline;
+  margin: 0px 2px 0px 2px;
+  padding: 0;
+}
+/* line 109, ../../../app/stylesheets/fancygrid.scss */
+.js-fancygrid ul.js-tablecontrol li input, .js-fancygrid ul.js-tablecontrol li select {
+  width: 60px !important;
+}
+/* line 113, ../../../app/stylesheets/fancygrid.scss */
+.js-fancygrid ul.js-tablecontrol li.button {
+  cursor: pointer;
+}
+/* line 116, ../../../app/stylesheets/fancygrid.scss */
+.js-fancygrid ul.js-tablecontrol li.button img {
+  vertical-align: bottom;
+  padding-bottom: 7px;
+}
+/* line 121, ../../../app/stylesheets/fancygrid.scss */
+.js-fancygrid ul.js-tablecontrol li.button .js-first {
+  background: url("/images/fancygrid/first.png") no-repeat;
+}
+/* line 125, ../../../app/stylesheets/fancygrid.scss */
+.js-fancygrid ul.js-tablecontrol li.button .js-last {
+  background: url("/images/fancygrid/last.png") no-repeat;
+}
+/* line 129, ../../../app/stylesheets/fancygrid.scss */
+.js-fancygrid ul.js-tablecontrol li.button .js-next {
+  background: url("/images/fancygrid/next.png") no-repeat;
+}
+/* line 133, ../../../app/stylesheets/fancygrid.scss */
+.js-fancygrid ul.js-tablecontrol li.button .js-previous {
+  background: url("/images/fancygrid/prev.png") no-repeat;
+}
+/* line 137, ../../../app/stylesheets/fancygrid.scss */
+.js-fancygrid ul.js-tablecontrol li.button .js-reload {
+  background: url("/images/fancygrid/reload.png") no-repeat;
+}
+/* line 141, ../../../app/stylesheets/fancygrid.scss */
+.js-fancygrid ul.js-tablecontrol li.button .js-clear {
+  background: url("/images/fancygrid/clear.png") no-repeat;
+}
+/* line 145, ../../../app/stylesheets/fancygrid.scss */
+.js-fancygrid ul.js-tablecontrol li.button .js-magnify {
+  background: url("/images/fancygrid/magnifier.png") no-repeat;
+}
+/* line 149, ../../../app/stylesheets/fancygrid.scss */
+.js-fancygrid ul.js-tablecontrol li.button .loading {
+  background: url("/images/fancygrid/loading.gif") no-repeat;
+}
+/* line 153, ../../../app/stylesheets/fancygrid.scss */
+.js-fancygrid ul.js-tablecontrol li.button .new {
+  background: url("/images/fancygrid/add.png") no-repeat;
+}
+/* line 158, ../../../app/stylesheets/fancygrid.scss */
+.js-fancygrid ul.js-tablecontrol li.separator {
+  border-left: 1px solid #cccccc;
+  border-right: 1px solid white;
+  height: 50px;
+  margin: 1px 8px;
+}
+/* line 166, ../../../app/stylesheets/fancygrid.scss */
+.js-fancygrid .actions img, .js-fancygrid .deadline img {
+  padding-bottom: 3px;
+  margin-right: 3px;
+}

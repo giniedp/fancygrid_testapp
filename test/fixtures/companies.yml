@@ -1,0 +1,27 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  location: MyString
+  founding_date: 2010-11-24
+  description: MyText
+
+two:
+  name: MyString
+  location: MyString
+  founding_date: 2010-11-24
+  description: MyText
+
+# == Schema Information
+#
+# Table name: companies
+#
+#  id            :integer         not null, primary key
+#  name          :string(255)
+#  location      :string(255)
+#  founding_date :date
+#  description   :text
+#  created_at    :datetime
+#  updated_at    :datetime
+#
+
