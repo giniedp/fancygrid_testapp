@@ -3,11 +3,19 @@ class CompaniesController < ApplicationController
   # GET /companies.xml
   def index
     fancygrid_for :companies do |g|
+
+      g.load_view({
+        "companies.id" => { :position => 2, :value => "10", :visible => true },
+        "companies.name" => { :position => 1, :visible => true },
+        "companies.location" => { :position => 0, :visible => true },
+      })
+      
       g.attributes(:id, :name, :location)
       g.methods("employees.count")
       g.rendered(:actions)
       
       g.url = companies_path
+      
       g.find()
     end
 

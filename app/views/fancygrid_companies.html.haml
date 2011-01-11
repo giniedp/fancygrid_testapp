@@ -1,0 +1,6 @@
+/do |column, record, value|
+- case cell.name
+- when :actions
+  = link_to 'Show', record
+  = link_to 'Edit', edit_company_path(record)
+  = link_to 'Destroy', record, :confirm => 'Are you sure?', :method => :delete

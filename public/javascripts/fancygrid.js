@@ -267,7 +267,7 @@
       $(this).trigger("action_" + name, value);
     },
     toggleSearch : function(){
-      $(this).find(".js-search").slideToggle();
+      $(this).find(".js-search").toggle();
     }
   };
 })(jQuery);

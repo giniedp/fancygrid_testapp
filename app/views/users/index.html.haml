@@ -1,0 +1,15 @@
+%h1 
+  Listing users
+= fancygrid :users do |column, record, value|
+  - case column.name
+  - when :roles
+    = record.roles.map{ |r| r.name }.join(", ")
+  - when :actions
+    = link_to 'Show', record
+    = link_to 'Edit', edit_user_path(record)
+    = link_to 'Destroy', record, :confirm => 'Are you sure?', :method => :delete
+  - when :name
+    = value.class
+    
+%br
+= link_to 'New User', new_user_path
