@@ -294,6 +294,7 @@
     },
     toggleSearch : function(){
       $(this).find(".js-search").toggle();
+      $(this).find(".js-extendedsearch").toggle();
     },
     simpleSearchRemoveAll : function(){
       var $this = $(this);

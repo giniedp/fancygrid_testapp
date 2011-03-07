@@ -88,6 +88,30 @@ $fg_border_separator2        : 1px solid #ffffff;
     }
   }
 
+  .js-extendedsearch{
+    padding: 5px;
+    input, select{
+      width: 80px;
+    }
+    ul {
+      margin: 5px 0px;
+      padding: 0px;
+      li{
+        margin: 0px 0px 3px 0px;
+        padding: 0px;
+        list-style: none;
+      }
+      li.button{
+        width  : 20px;
+        height : 20px;
+        cursor: pointer;
+        .loading{
+          background: url('/images/fancygrid/loading.gif') no-repeat;
+        }
+      }
+    }
+  }
+  
   ul.js-tablecontrol.top{
     background: $fg_background_round;
   }
