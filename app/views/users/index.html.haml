@@ -8,8 +8,8 @@
     = link_to 'Show', record
     = link_to 'Edit', edit_user_path(record)
     = link_to 'Destroy', record, :confirm => 'Are you sure?', :method => :delete
-  - when :name
-    = value.class
+  - when :names
+    = value.map{ |r| r.name }.join(", ")
     
 %br
 = link_to 'New User', new_user_path

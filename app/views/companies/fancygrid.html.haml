@@ -1,5 +1,8 @@
 /do |column, record, value|
 - case cell.name
+- when :links
+  = link_to 'Employees', company_employees_path(record)
+  = link_to 'Projects', company_projects_path(record)
 - when :actions
   = link_to 'Show', record
   = link_to 'Edit', edit_company_path(record)

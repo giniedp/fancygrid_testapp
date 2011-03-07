@@ -4,11 +4,16 @@ class RolesController < ApplicationController
   def index
     fancygrid_for :roles do |g|
       g.attributes(:id, :name)
-      #g.methods("employees.count")
+      
+      g.columns_for(:users) do |u|
+        u.proc(:username, :searchable => true, :selectable => true) do |role| 
+          role.users.map{ |u| u.username }.join(", ") 
+        end
+      end
       g.rendered(:actions)
       
       g.url = roles_path
-      g.find()
+      g.find(:include => :users)
     end
   end
 

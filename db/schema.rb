@@ -14,8 +14,6 @@ ActiveRecord::Schema.define(:version => 20110110155917) do
 
   create_table "companies", :force => true do |t|
     t.string   "name"
-    t.string   "location"
-    t.date     "founding_date"
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -23,9 +21,8 @@ ActiveRecord::Schema.define(:version => 20110110155917) do
 
   create_table "employees", :force => true do |t|
     t.integer  "company_id"
-    t.string   "name"
+    t.integer  "user_id"
     t.string   "department"
-    t.datetime "birthday"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

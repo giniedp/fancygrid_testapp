@@ -1,41 +1,24 @@
-%w(
-bit
-buzz
-code
-data
-digi
-giga
-info
-venture
-object
-link
-verti
-tele
-trade
-tag
-module
-bit
-base
-state
-system
-club
-match
-ball
-field
-run
-race
-hit
-goal
-score
-net
-sport
-shot
-bet
-play
-win
-lose
-challenge
-lift
-).each do |name|
-  Company.create(:name => name, :description => name, :founding_date => Date.today)
-end
+Role.destroy_all
+User.destroy_all
+Company.destroy_all
+Employee.destroy_all
+
+admin = Role.create(:name => "admin")
+boss = Role.create(:name => "boss")
+worker = Role.create(:name => "worker")
+
+alice = User.create(:username => "Alice", :roles => [boss])
+bob = User.create(:username => "Bob", :roles => [worker])
+andrew = User.create(:username => "Andrew", :roles => [admin, worker])
+
+empuxa = Company.create(:name => "empuxa", :description => "empuxa")
+venture = Company.create(:name => "venture", :description => "venture")
+code_it = Company.create(:name => "Code it", :description => "just code it")
+
+Employee.create(:user => bob, :company => empuxa)
+Employee.create(:user => bob, :company => venture)
+Employee.create(:user => bob, :company => code_it)
+
+Employee.create(:user => alice, :company => empuxa)
+
+Employee.create(:user => andrew, :company => empuxa)

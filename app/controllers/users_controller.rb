@@ -2,25 +2,18 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.xml
   def index
-    foo = {
-      "users.id" => { :position => 1, :visible => true },
-      "users.username" => { :position => 0, :visible => true }
-    }
-    
     fancygrid_for :users do |g|
-      
       g.attributes(:id, :username)
-      g.rendered(:roles, :actions)
       
       g.columns_for(:roles) do |r|
-        r.attributes(:name)
+        r.proc(:name, :searchable => true) do |user| 
+          user.roles.map{ |r| r.name }.join(", ") 
+        end
       end
+      g.rendered(:actions)
       
       g.url = users_path
-      g.find(:joins => :roles)
-      
-      g.load_view(foo)
-      #session[:fancygrid_users_table] = g.dump_view()
+      g.find(:include => :roles)
     end
   end
 

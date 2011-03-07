@@ -2,9 +2,8 @@ class CreateEmployees < ActiveRecord::Migration
   def self.up
     create_table :employees do |t|
       t.references :company
-      t.string :name
+      t.references :user
       t.string :department
-      t.datetime :birthday
 
       t.timestamps
     end

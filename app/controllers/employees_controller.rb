@@ -2,11 +2,20 @@ class EmployeesController < ApplicationController
   # GET /employees
   # GET /employees.xml
   def index
-    @employees = Employee.all
+    fancygrid_for :employees do |g|
 
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @employees }
+      g.attributes(:id, :department)
+      
+      g.columns_for(:user) do |u|
+        u.attributes(:name)
+      end
+      
+      g.columns_for(:company) do |c|
+        c.attributes(:name)
+      end
+      
+      g.url = company_employees_path(current_company)
+      g.find()
     end
   end
 

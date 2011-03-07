@@ -7,4 +7,14 @@
     = stylesheet_link_tag 'compiled/fancygrid', 'scaffold'
     = csrf_meta_tag
   %body
-    = yield
+  
+    #tables
+      %ul
+        %li
+          = link_to "List Users", users_path
+        %li
+          = link_to "List Roles", roles_path
+        %li
+          = link_to "List Companies", companies_path
+    #content
+      = yield
