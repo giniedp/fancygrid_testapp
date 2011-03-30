@@ -12,8 +12,7 @@ class RolesController < ApplicationController
       end
       g.rendered(:actions)
       
-      g.url = roles_path
-      g.find(:include => :users)
+      g.data = Role.find(:all, :include => :users)
     end
   end
 

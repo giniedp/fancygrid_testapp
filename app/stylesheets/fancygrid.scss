@@ -32,8 +32,36 @@ $fg_border_separator2        : 1px solid #ffffff;
           font-weight : bold;
           padding     : 5px 10px 5px 10px;
           border-right: $fg_border;
+          
+          .js-order-tag{
+            display: none;
+            float: right;
+            width: 16px;
+            height: 16px;
+          }
         }
-
+        th[order='ASC']{
+          .js-order-tag{
+            display: block;
+            background: url('/images/fancygrid/dn.png') no-repeat scroll 50% 50% transparent;
+          }
+        }
+        th[order='ASC']:hover{
+          .js-order-tag{
+            background: url('/images/fancygrid/ddn.png') no-repeat scroll 50% 50% transparent;
+          }
+        }
+        th[order='DESC']{
+          .js-order-tag{
+            display: block;
+            background: url('/images/fancygrid/up.png') no-repeat scroll 50% 50% transparent;
+          }
+        }
+        th[order='DESC']:hover{
+          .js-order-tag{
+            background: url('/images/fancygrid/uup.png') no-repeat scroll 50% 50% transparent;
+          }
+        }
         td{
           padding     : 4px 10px 4px 10px;
           border-right: $fg_border;
@@ -88,18 +116,22 @@ $fg_border_separator2        : 1px solid #ffffff;
     }
   }
 
-  .js-extendedsearch{
-    padding: 5px;
-    input, select{
-      width: 80px;
+  .js-search{
+    .top, .bottom{
+      padding: 5px;
     }
-    ul {
+
+    ul.js-search-criteria {
       margin: 5px 0px;
       padding: 0px;
-      li{
+      
+      li.js-search-criterion{
         margin: 0px 0px 3px 0px;
         padding: 0px;
         list-style: none;
+        input, select{
+          width: 80px;
+        }
       }
       li.button{
         width  : 20px;
@@ -170,6 +202,10 @@ $fg_border_separator2        : 1px solid #ffffff;
         background: url('/images/fancygrid/magnifier.png') no-repeat;
       }
       
+      .js-sort{
+        background: url('/images/fancygrid/order.png') no-repeat;
+      }
+      
       .loading{
         background: url('/images/fancygrid/loading.gif') no-repeat;
       }
@@ -192,4 +228,49 @@ $fg_border_separator2        : 1px solid #ffffff;
     margin-right: 3px;
   }
 
+  .js-sortable-visible{
+    float: left;
+  }
+  .js-sortable-hidden{
+    float: right;
+  }
+  .js-sortable { 
+    list-style-type: none; 
+    margin: 0; 
+    padding: 0; 
+    width: 49%; 
+    display: inline;
+    background: $fg_background_system;
+    
+    li {
+      margin: 0 3px 3px 3px; 
+      padding: 0.4em; 
+      padding-left: 1.5em; 
+      font-size: 1.4em; 
+      height: 18px;
+      
+      span {
+        position: absolute; 
+        margin-left: -1.3em;
+      }
+      h4{
+        margin: 0px;
+        padding: 0px;
+      }
+    }
+  }
+	
+	.js-sort-content{
+	  margin: 5%;
+	  position: fixed;
+	  top: 0px;
+	  width: 90%;
+	  height: 90%;
+	}
+	.ui-state-highlight{
+	  margin-bottom: 10px;
+	  padding: 10px;
+	}
 }
+
+

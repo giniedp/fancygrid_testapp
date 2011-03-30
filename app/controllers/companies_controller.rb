@@ -2,6 +2,7 @@ class CompaniesController < ApplicationController
   # GET /companies
   # GET /companies.xml
   def index
+
     fancygrid_for :companies do |g|
 
       g.attributes(:id, :name)
@@ -9,8 +10,20 @@ class CompaniesController < ApplicationController
       g.rendered(:links, :actions)
       
       g.template = "companies/fancygrid"
+      g.search_type = "complex"
+      
+      g.load_view_proc do |instance|
+        session["fancygrid_#{instance.name.to_s}"] || {}
+      end
+      g.store_view_proc do |instance, hash|
+        session["fancygrid_#{instance.name.to_s}"] = hash
+      end
+      
       g.url = companies_path
-      g.find()
+      g.find do |query|
+        query.order("companies.id ASC")
+      end
+
     end
 
   end
