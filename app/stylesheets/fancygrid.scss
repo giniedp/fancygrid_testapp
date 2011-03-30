@@ -94,13 +94,17 @@ $fg_border_separator2        : 1px solid #ffffff;
           padding   : 4px;
           background: $fg_background_system;
           
-          input{
+          input, select{
             display : inline;
             width   : 99%;
             height  : 25px;
             margin  : 0px;
             padding : 0px;
             border  : $fg_border;
+          }
+          
+          select {
+            width   : 100%;
           }
 
           input:focus{

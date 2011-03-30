@@ -72,7 +72,7 @@
   background: none repeat scroll 0 0 #f8f8f8;
 }
 /* line 97, ../../../app/stylesheets/fancygrid.scss */
-.js-fancygrid .js-tablewrapper table tr.js-search td input {
+.js-fancygrid .js-tablewrapper table tr.js-search td input, .js-fancygrid .js-tablewrapper table tr.js-search td select {
   display: inline;
   width: 99%;
   height: 25px;
@@ -81,51 +81,55 @@
   border: 1px solid #cccccc;
 }
 /* line 106, ../../../app/stylesheets/fancygrid.scss */
+.js-fancygrid .js-tablewrapper table tr.js-search td select {
+  width: 100%;
+}
+/* line 110, ../../../app/stylesheets/fancygrid.scss */
 .js-fancygrid .js-tablewrapper table tr.js-search td input:focus {
   background: none repeat scroll 0 0 #fffae0;
 }
-/* line 112, ../../../app/stylesheets/fancygrid.scss */
+/* line 116, ../../../app/stylesheets/fancygrid.scss */
 .js-fancygrid .js-tablewrapper table tr.js-search:hover td {
   background: none repeat scroll 0 0 #f8f8f8;
 }
-/* line 120, ../../../app/stylesheets/fancygrid.scss */
+/* line 124, ../../../app/stylesheets/fancygrid.scss */
 .js-fancygrid .js-search .top, .js-fancygrid .js-search .bottom {
   padding: 5px;
 }
-/* line 124, ../../../app/stylesheets/fancygrid.scss */
+/* line 128, ../../../app/stylesheets/fancygrid.scss */
 .js-fancygrid .js-search ul.js-search-criteria {
   margin: 5px 0px;
   padding: 0px;
 }
-/* line 128, ../../../app/stylesheets/fancygrid.scss */
+/* line 132, ../../../app/stylesheets/fancygrid.scss */
 .js-fancygrid .js-search ul.js-search-criteria li.js-search-criterion {
   margin: 0px 0px 3px 0px;
   padding: 0px;
   list-style: none;
 }
-/* line 132, ../../../app/stylesheets/fancygrid.scss */
+/* line 136, ../../../app/stylesheets/fancygrid.scss */
 .js-fancygrid .js-search ul.js-search-criteria li.js-search-criterion input, .js-fancygrid .js-search ul.js-search-criteria li.js-search-criterion select {
   width: 80px;
 }
-/* line 136, ../../../app/stylesheets/fancygrid.scss */
+/* line 140, ../../../app/stylesheets/fancygrid.scss */
 .js-fancygrid .js-search ul.js-search-criteria li.button {
   width: 20px;
   height: 20px;
   cursor: pointer;
 }
-/* line 140, ../../../app/stylesheets/fancygrid.scss */
+/* line 144, ../../../app/stylesheets/fancygrid.scss */
 .js-fancygrid .js-search ul.js-search-criteria li.button .loading {
   background: url("/images/fancygrid/loading.gif") no-repeat;
 }
-/* line 147, ../../../app/stylesheets/fancygrid.scss */
+/* line 151, ../../../app/stylesheets/fancygrid.scss */
 .js-fancygrid ul.js-tablecontrol.top {
   background: transparent;
 }
-/* line 150, ../../../app/stylesheets/fancygrid.scss */
+/* line 154, ../../../app/stylesheets/fancygrid.scss */
 .js-fancygrid ul.js-tablecontrol.bottom {
   background: transparent;
 }
-/* line 153, ../../../app/stylesheets/fancygrid.scss */
+/* line 157, ../../../app/stylesheets/fancygrid.scss */
 .js-fancygrid ul.js-tablecontrol {
   clear: both;
   display: block;
@@ -133,87 +137,87 @@
   margin: 0px;
   padding: 5px;
 }
-/* line 160, ../../../app/stylesheets/fancygrid.scss */
+/* line 164, ../../../app/stylesheets/fancygrid.scss */
 .js-fancygrid ul.js-tablecontrol li {
   list-style: none;
   display: inline;
   margin: 0px 2px 0px 2px;
   padding: 0;
 }
-/* line 165, ../../../app/stylesheets/fancygrid.scss */
+/* line 169, ../../../app/stylesheets/fancygrid.scss */
 .js-fancygrid ul.js-tablecontrol li input, .js-fancygrid ul.js-tablecontrol li select {
   width: 60px !important;
 }
-/* line 169, ../../../app/stylesheets/fancygrid.scss */
+/* line 173, ../../../app/stylesheets/fancygrid.scss */
 .js-fancygrid ul.js-tablecontrol li.button {
   cursor: pointer;
 }
-/* line 172, ../../../app/stylesheets/fancygrid.scss */
+/* line 176, ../../../app/stylesheets/fancygrid.scss */
 .js-fancygrid ul.js-tablecontrol li.button img {
   vertical-align: bottom;
   padding-bottom: 7px;
 }
-/* line 177, ../../../app/stylesheets/fancygrid.scss */
+/* line 181, ../../../app/stylesheets/fancygrid.scss */
 .js-fancygrid ul.js-tablecontrol li.button .js-first {
   background: url("/images/fancygrid/first.png") no-repeat;
 }
-/* line 181, ../../../app/stylesheets/fancygrid.scss */
+/* line 185, ../../../app/stylesheets/fancygrid.scss */
 .js-fancygrid ul.js-tablecontrol li.button .js-last {
   background: url("/images/fancygrid/last.png") no-repeat;
 }
-/* line 185, ../../../app/stylesheets/fancygrid.scss */
+/* line 189, ../../../app/stylesheets/fancygrid.scss */
 .js-fancygrid ul.js-tablecontrol li.button .js-next {
   background: url("/images/fancygrid/next.png") no-repeat;
 }
-/* line 189, ../../../app/stylesheets/fancygrid.scss */
+/* line 193, ../../../app/stylesheets/fancygrid.scss */
 .js-fancygrid ul.js-tablecontrol li.button .js-previous {
   background: url("/images/fancygrid/prev.png") no-repeat;
 }
-/* line 193, ../../../app/stylesheets/fancygrid.scss */
+/* line 197, ../../../app/stylesheets/fancygrid.scss */
 .js-fancygrid ul.js-tablecontrol li.button .js-reload {
   background: url("/images/fancygrid/reload.png") no-repeat;
 }
-/* line 197, ../../../app/stylesheets/fancygrid.scss */
+/* line 201, ../../../app/stylesheets/fancygrid.scss */
 .js-fancygrid ul.js-tablecontrol li.button .js-clear {
   background: url("/images/fancygrid/clear.png") no-repeat;
 }
-/* line 201, ../../../app/stylesheets/fancygrid.scss */
+/* line 205, ../../../app/stylesheets/fancygrid.scss */
 .js-fancygrid ul.js-tablecontrol li.button .js-magnify {
   background: url("/images/fancygrid/magnifier.png") no-repeat;
 }
-/* line 205, ../../../app/stylesheets/fancygrid.scss */
+/* line 209, ../../../app/stylesheets/fancygrid.scss */
 .js-fancygrid ul.js-tablecontrol li.button .js-sort {
   background: url("/images/fancygrid/order.png") no-repeat;
 }
-/* line 209, ../../../app/stylesheets/fancygrid.scss */
+/* line 213, ../../../app/stylesheets/fancygrid.scss */
 .js-fancygrid ul.js-tablecontrol li.button .loading {
   background: url("/images/fancygrid/loading.gif") no-repeat;
 }
-/* line 213, ../../../app/stylesheets/fancygrid.scss */
+/* line 217, ../../../app/stylesheets/fancygrid.scss */
 .js-fancygrid ul.js-tablecontrol li.button .new {
   background: url("/images/fancygrid/add.png") no-repeat;
 }
-/* line 218, ../../../app/stylesheets/fancygrid.scss */
+/* line 222, ../../../app/stylesheets/fancygrid.scss */
 .js-fancygrid ul.js-tablecontrol li.separator {
   border-left: 1px solid #cccccc;
   border-right: 1px solid white;
   height: 50px;
   margin: 1px 8px;
 }
-/* line 226, ../../../app/stylesheets/fancygrid.scss */
+/* line 230, ../../../app/stylesheets/fancygrid.scss */
 .js-fancygrid .actions img, .js-fancygrid .deadline img {
   padding-bottom: 3px;
   margin-right: 3px;
 }
-/* line 231, ../../../app/stylesheets/fancygrid.scss */
+/* line 235, ../../../app/stylesheets/fancygrid.scss */
 .js-fancygrid .js-sortable-visible {
   float: left;
 }
-/* line 234, ../../../app/stylesheets/fancygrid.scss */
+/* line 238, ../../../app/stylesheets/fancygrid.scss */
 .js-fancygrid .js-sortable-hidden {
   float: right;
 }
-/* line 237, ../../../app/stylesheets/fancygrid.scss */
+/* line 241, ../../../app/stylesheets/fancygrid.scss */
 .js-fancygrid .js-sortable {
   list-style-type: none;
   margin: 0;
@@ -222,7 +226,7 @@
   display: inline;
   background: none repeat scroll 0 0 #f8f8f8;
 }
-/* line 245, ../../../app/stylesheets/fancygrid.scss */
+/* line 249, ../../../app/stylesheets/fancygrid.scss */
 .js-fancygrid .js-sortable li {
   margin: 0 3px 3px 3px;
   padding: 0.4em;
@@ -230,17 +234,17 @@
   font-size: 1.4em;
   height: 18px;
 }
-/* line 252, ../../../app/stylesheets/fancygrid.scss */
+/* line 256, ../../../app/stylesheets/fancygrid.scss */
 .js-fancygrid .js-sortable li span {
   position: absolute;
   margin-left: -1.3em;
 }
-/* line 256, ../../../app/stylesheets/fancygrid.scss */
+/* line 260, ../../../app/stylesheets/fancygrid.scss */
 .js-fancygrid .js-sortable li h4 {
   margin: 0px;
   padding: 0px;
 }
-/* line 263, ../../../app/stylesheets/fancygrid.scss */
+/* line 267, ../../../app/stylesheets/fancygrid.scss */
 .js-fancygrid .js-sort-content {
   margin: 5%;
   position: fixed;
@@ -248,7 +252,7 @@
   width: 90%;
   height: 90%;
 }
-/* line 270, ../../../app/stylesheets/fancygrid.scss */
+/* line 274, ../../../app/stylesheets/fancygrid.scss */
 .js-fancygrid .ui-state-highlight {
   margin-bottom: 10px;
   padding: 10px;

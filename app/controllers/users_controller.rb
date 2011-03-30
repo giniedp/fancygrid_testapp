@@ -12,6 +12,15 @@ class UsersController < ApplicationController
       end
       g.rendered(:actions)
       
+      g.search_formats = {
+        :select => {
+          "roles.name" => {
+            :collection => Role.all,
+            :text_method => "name",
+            :value_method => "name"
+          }
+        }
+      }
       g.url = users_path
       g.find(:include => :roles)
     end

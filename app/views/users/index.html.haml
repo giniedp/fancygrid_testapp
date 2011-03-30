@@ -1,5 +1,6 @@
 %h1 
   Listing users
+  
 = fancygrid :users do |column, record, value|
   - case column.name
   - when :roles
