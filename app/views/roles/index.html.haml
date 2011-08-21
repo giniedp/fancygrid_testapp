@@ -1,7 +1,12 @@
 %h1 
   Listing roles
+ 
+/= fancygrid :roles
+
 = fancygrid :roles do |column, record, value|
   - case column.name
+  - when :id
+    = "- #{value}"
   - when :actions
     = link_to 'Show', record
     = link_to 'Edit', edit_role_path(record)

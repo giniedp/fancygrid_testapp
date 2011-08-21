@@ -4,10 +4,10 @@ class EmployeesController < ApplicationController
   def index
     fancygrid_for :employees do |g|
 
-      g.attributes(:id, :department)
+      g.attributes(:id)
       
       g.columns_for(:user) do |u|
-        u.attributes(:name)
+        u.attributes(:username)
       end
       
       g.columns_for(:company) do |c|
@@ -15,7 +15,12 @@ class EmployeesController < ApplicationController
       end
       
       g.url = company_employees_path(current_company)
-      g.find()
+      g.find do |query|
+        query.include([:user, :company])
+        if params[:company_id]
+          query.conditions(["employees.company_id = ?", params[:company_id]])
+        end
+      end
     end
   end
 

@@ -23,7 +23,6 @@ class CompaniesController < ApplicationController
       g.find do |query|
         query.order("companies.id ASC")
       end
-
     end
 
   end

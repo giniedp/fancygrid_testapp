@@ -1,7 +1,7 @@
 de:
   fancygrid:
     pagination:
-      per_page: 'Ergebnisse pro Seite:'
+      per_page: 'Pro Seite:'
       page: 'Seite'
       of: 'von'
       results: 'Ergebnisse'
@@ -11,7 +11,11 @@ de:
       reload: 'Seite neu laden'
     sort:
       submit: "Spalten sortieren"
+      info: "Sie können die Spalten per Drag&Drop sortieren. Ziehen Sie die Spalten die Sie sehen möchten in die linke Liste, alle anderen in die rechte Liste. Klicken Sie zum Abschluss in den abgedunkelten Bereich."
+      header_visible: "Sichtbare Spalten"
+      header_hidden: "Versteckte Spalten"
     search:
+      title: 'Suche'
       submit: 'Suchen'
       clear: 'Suche löschen'
       toggle: 'Suchleiste zeigen/verstecken'
@@ -35,3 +39,25 @@ de:
         is_not_false: 'ist nicht falsch'
         in: 'ist in'
         not_in: 'ist nicht in'
+    tables:
+      companies:
+        id: ID
+        name: Firmenname
+        employees:
+          count: Mitarbeiterzahl
+        actions: Aktionen
+        links: Links
+      users:
+        id: ID
+        username: Benutzername
+        roles:
+          name: Rollen
+        actions: Aktionen
+      roles:
+        id: ID
+        name: Name
+      employees:
+        user:
+          username: "User"
+        company:
+          name: "Company"

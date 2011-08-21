@@ -5,11 +5,13 @@ class UsersController < ApplicationController
     fancygrid_for :users do |g|
       g.attributes(:id, :username)
       
-      g.columns_for(:roles) do |r|
+      g.columns_for(:role) do |r|
+        r.attributes(:id)
         r.proc(:name, :searchable => true) do |user| 
           user.roles.map{ |r| r.name }.join(", ") 
         end
       end
+
       g.rendered(:actions)
       
       g.search_formats = {
@@ -21,8 +23,11 @@ class UsersController < ApplicationController
           }
         }
       }
+      
       g.url = users_path
-      g.find(:include => :roles)
+      g.ajax_type = :put
+      g.enable_sort_window = true
+      g.find(:select => "*", :include => :roles )
     end
   end
 

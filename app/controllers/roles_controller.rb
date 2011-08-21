@@ -3,16 +3,13 @@ class RolesController < ApplicationController
   # GET /roles.xml
   def index
     fancygrid_for :roles do |g|
-      g.attributes(:id, :name)
       
-      g.columns_for(:users) do |u|
-        u.proc(:username, :searchable => true, :selectable => true) do |role| 
-          role.users.map{ |u| u.username }.join(", ") 
-        end
-      end
-      g.rendered(:actions)
+      g.attributes(:name)
       
-      g.data = Role.find(:all, :include => :users)
+      g.rendered(:id, :actions)
+      
+      g.data = Role.find(:all)
+
     end
   end
 

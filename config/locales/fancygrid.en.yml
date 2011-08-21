@@ -1,20 +1,23 @@
 en:
   fancygrid:
     pagination:
-      per_page: 'Results per Page:'
+      per_page: 'Per page:'
       page: 'Page'
       of: 'of'
       results: 'Results'
-      
-      prev_page: 'Pervious pagee'
+      prev_page: 'Pervious page'
       next_page: 'Next page'
       reload: 'Reload'
     sort:
       submit: "Sort columns"
+      info: "You can sort the columns using drag&drop. Drag the columns you want to be visible into the left list and all other into the right list. To submit just click somwhere outside the two lists."
+      header_visible: "Visible columns"
+      header_hidden: "Hidden columns"
     search:
-      submit: 'search'
+      title: 'Search'
+      submit: 'Apply search'
       clear: 'Clear search'
-      toggle: 'Show/Hide searchtab'
+      toggle: 'Show/Hide search'
       conditions: 'All conditions must be met:'
       
       operator:
@@ -35,5 +38,22 @@ en:
         is_not_false: 'is not false'
         in: 'is in'
         not_in: 'is not in'
-
-      
+    tables:
+      companies:
+        id: ID
+        name: Companyname
+        employees:
+          count: Employee number
+        actions: Actions
+        links: Links
+      users:
+        id: ID
+        username: Username
+        roles:
+          name: Roles
+        actions: Actions
+      employees:
+        user:
+          username: "User"
+        company:
+          name: "Company"

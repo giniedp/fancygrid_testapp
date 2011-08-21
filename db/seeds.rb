@@ -1,24 +1,28 @@
+require "name_generator"
+
 Role.destroy_all
 User.destroy_all
 Company.destroy_all
 Employee.destroy_all
 
-admin = Role.create(:name => "admin")
-boss = Role.create(:name => "boss")
-worker = Role.create(:name => "worker")
+names = NameGenerator.generate(1000, 5, 15)
 
-alice = User.create(:username => "Alice", :roles => [boss])
-bob = User.create(:username => "Bob", :roles => [worker])
-andrew = User.create(:username => "Andrew", :roles => [admin, worker])
+Role.create(:name => "admin")
+Role.create(:name => "boss")
+Role.create(:name => "worker")
+roles = Role.all
 
-empuxa = Company.create(:name => "empuxa", :description => "empuxa")
-venture = Company.create(:name => "venture", :description => "venture")
-code_it = Company.create(:name => "Code it", :description => "just code it")
+500.times do
+  User.create(:username => names.shift, :roles => [ roles[rand(roles.length)] ] )
+end
+users = User.all
 
-Employee.create(:user => bob, :company => empuxa)
-Employee.create(:user => bob, :company => venture)
-Employee.create(:user => bob, :company => code_it)
+50.times do
+  name = names.shift
+  Company.create(:name => name, :description => name)
+end
+companies = Company.all
 
-Employee.create(:user => alice, :company => empuxa)
-
-Employee.create(:user => andrew, :company => empuxa)
+users.each do |user|
+  Employee.create(:user => user, :company => companies[rand(companies.length)])
+end

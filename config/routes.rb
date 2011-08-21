@@ -1,7 +1,11 @@
 FancygridTestapp::Application.routes.draw do
   
   resources :roles
-  resources :users
+  resources :users do
+    collection do
+      put :index 
+    end
+  end
 
   resources :companies do
     resources :employees
