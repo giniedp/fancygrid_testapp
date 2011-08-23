@@ -27,6 +27,7 @@ class UsersController < ApplicationController
       g.url = users_path
       g.ajax_type = :put
       g.enable_sort_window = true
+      g.simple_search_operators[:users] = :equal
       g.find(:select => "*", :include => :roles )
     end
   end
